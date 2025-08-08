@@ -53,6 +53,7 @@ docs = [
   "myst-parser>=2.0",
   "sphinx-autodoc-typehints>=2.1",
   "sphinx-gallery>=0.16",
+  "matplotlib>=3.7",
 ]
 
 [tool.black]
