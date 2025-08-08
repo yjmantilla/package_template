@@ -1,8 +1,7 @@
 # API Reference
 
-```{autosummary}
-:toctree: _generated
-:recursive:
-
-package_template
+```{automodule} package_template
+:members:
+:undoc-members:
+:show-inheritance:
 ```

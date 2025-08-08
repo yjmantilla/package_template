@@ -1,4 +1,9 @@
 # Example gallery
+---
+orphan: true
+---
+
+# Example gallery
 
 Welcome to the example gallery for `package_template`.
 
