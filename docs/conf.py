@@ -47,6 +47,6 @@ myst_enable_extensions = [
 sphinx_gallery_conf = {
     "examples_dirs": ["examples"],
     "gallery_dirs": ["auto_examples"],
-    "filename_pattern": r"/plot_",
+    "filename_pattern": r"/plot_.*\.py$",
     "download_all_examples": False,
 }

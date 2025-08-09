@@ -12,7 +12,7 @@ A modern Python package template.
 
 user_guide/index
 api/index
-examples/index
+auto_examples/index
 changelog
 ```
 
