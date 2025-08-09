@@ -1,30 +1,36 @@
 import os
+import subprocess
 import sys
 from datetime import datetime
-
-from importlib.metadata import version as _v, PackageNotFoundError
-import subprocess
+from importlib.metadata import PackageNotFoundError
+from importlib.metadata import version as _v
 
 project = "package_template"
 
 # Full version from installed dist (hatch-vcs stamps this)
 try:
-    release = _v("package_template")   # matches [project].name in pyproject
+    release = _v("package_template")  # matches [project].name in pyproject
 except PackageNotFoundError:
     release = "0+unknown"
 
 # Short X.Y
 version = ".".join(release.split(".")[:2])
 
+
 # Append commit hash to the HTML title (nice for dev builds)
 def _git_short():
     try:
-        return subprocess.check_output(
-            ["git", "rev-parse", "--short", "HEAD"],
-            stderr=subprocess.DEVNULL,
-        ).decode().strip()
+        return (
+            subprocess.check_output(
+                ["git", "rev-parse", "--short", "HEAD"],
+                stderr=subprocess.DEVNULL,
+            )
+            .decode()
+            .strip()
+        )
     except Exception:
         return ""
+
 
 _commit = _git_short()
 html_title = f"{project} {release}" + (f" ({_commit})" if _commit else "")
