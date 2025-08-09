@@ -1,7 +1,7 @@
 # Installation
 
 ```bash
-pip install package-template
+pip install package_template
 ```
 
 For development:

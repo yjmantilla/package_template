@@ -1,4 +1,4 @@
-# package-template
+# package_template
 
 A modern Python package template featuring:
 
