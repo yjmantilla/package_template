@@ -14,6 +14,8 @@ dist/
 *.egg-info/
 *.egg
 
+docs/sg_execution_times.rst
+
 # Virtual environments
 .venv/
 .venv*/
