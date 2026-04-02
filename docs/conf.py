@@ -5,8 +5,6 @@ from datetime import datetime
 from importlib.metadata import PackageNotFoundError
 from importlib.metadata import version as _v
 
-project = "package_template"
-
 # Full version from installed dist (hatch-vcs stamps this)
 try:
     release = _v("package_template")  # matches [project].name in pyproject

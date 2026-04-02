@@ -35,7 +35,6 @@ Issues = "https://github.com/your-org/package_template/issues"
 
 [project.optional-dependencies]
 dev = [
-  "black>=24.3",
   "ruff>=0.5",
   "mypy>=1.10",
   "pre-commit>=3.7",
@@ -55,10 +54,6 @@ docs = [
   "sphinx-gallery>=0.16",
   "matplotlib>=3.7",
 ]
-
-[tool.black]
-line-length = 100
-target-version = ["py310"]
 
 [tool.ruff]
 line-length = 100
@@ -88,7 +83,7 @@ check_untyped_defs = true
 
 [tool.pytest.ini_options]
 minversion = "7.0"
-addopts = "-ra --cov=package_template --cov-report=term-missing"
+addopts = "-ra --cov=src/package_template --cov-report=term-missing"
 testpaths = ["tests"]
 
 [tool.hatch.build.targets.sdist]
